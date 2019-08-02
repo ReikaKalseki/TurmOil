@@ -1,0 +1,9 @@
+{
+  "name": "TurmOil",
+  "version": "0.0.1",
+  "title": "TurmOil",
+  "author": "Reika",
+  "dependencies": ["base >= 0.17.60", "!Heavy_Oil_Chemical_Science"],
+  "factorio_version": "0.17",
+  "description": "Redesigns basic oil processing and blue science, reverting the poorly-conceived changes in 17.60 and optionally adding alternate streamlining which does not excessively simplify oil processing and which make realistic sense."
+}
