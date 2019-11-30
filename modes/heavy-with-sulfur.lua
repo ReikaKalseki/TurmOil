@@ -26,7 +26,8 @@ removeTechUnlock("sulfur-processing", "sulfur")
 addRecipeProduct("lubricant", "sulfur", 6)
 
 data.raw.item.sulfur.fuel_category = "chemical"
-data.raw.item.sulfur.fuel_value = "1200kJ"
-data.raw.item.sulfur.fuel_emissions_multiplier = 8
+data.raw.item.sulfur.fuel_value = "600kJ"
+data.raw.item.sulfur.fuel_emissions_multiplier = 12
+data.raw.item.sulfur.fuel_acceleration_multiplier = 0.3
 
 data.raw.technology["plastics"].prerequisites = {"advanced-oil-processing"} --, "chemical-science-pack"
