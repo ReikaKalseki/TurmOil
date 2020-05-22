@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "title": "TurmOil",
   "author": "Reika",
-  "dependencies": ["base >= 0.17.60", "DragonIndustries", "!Heavy_Oil_Chemical_Science"],
-  "factorio_version": "0.17",
+  "dependencies": ["base >= 0.18", "DragonIndustries", "!Heavy_Oil_Chemical_Science"],
+  "factorio_version": "0.18",
   "description": "Redesigns basic oil processing and blue science, reverting the poorly-conceived changes in 17.60. Optionally adds alternate streamlining which does not excessively simplify oil processing and which makes realistic sense. "
 }
