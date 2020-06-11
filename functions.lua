@@ -3,6 +3,14 @@ require "__DragonIndustries__.mathhelper"
 require "__DragonIndustries__.recipe"
 require "__DragonIndustries__.tech"
 
+function setBlueScienceStatus(tech, has)
+	if has then
+		addSciencePackToTech(tech, "chemical-science-pack")
+	else
+		removeSciencePackFromTech(tech, "chemical-science-pack")
+	end
+end
+
 function setOilRecipeInput(crude, water)
 	local rec = data.raw.recipe["basic-oil-processing"]
 	

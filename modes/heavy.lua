@@ -20,3 +20,14 @@ setSolidFuelTechs("flammables", "flammables", "advanced-oil-processing")
 data.raw.technology["lubricant"].prerequisites = {"oil-processing"}
 
 data.raw.technology["plastics"].prerequisites = {"advanced-oil-processing"} --, "chemical-science-pack"
+
+replaceItemInRecipe("sulfur", "petroleum-gas", "heavy-oil", 1)
+
+setBlueScienceStatus("flammables", false)
+setBlueScienceStatus("electric-engine", false)
+setBlueScienceStatus("lubricant", false)
+
+setBlueScienceStatus("plastics", true)
+setBlueScienceStatus("explosives", true)
+setBlueScienceStatus("advanced-oil-processing", true)
+setBlueScienceStatus("advanced-electronics", true)

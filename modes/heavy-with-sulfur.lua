@@ -31,3 +31,12 @@ data.raw.item.sulfur.fuel_emissions_multiplier = 12
 data.raw.item.sulfur.fuel_acceleration_multiplier = 0.3
 
 data.raw.technology["plastics"].prerequisites = {"advanced-oil-processing"} --, "chemical-science-pack"
+
+setBlueScienceStatus("flammables", false)
+setBlueScienceStatus("electric-engine", false)
+setBlueScienceStatus("lubricant", false)
+
+setBlueScienceStatus("plastics", true)
+setBlueScienceStatus("explosives", true)
+setBlueScienceStatus("advanced-oil-processing", true)
+setBlueScienceStatus("advanced-electronics", true)
