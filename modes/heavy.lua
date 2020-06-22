@@ -13,7 +13,7 @@ setBlueScienceRecipe({
 	{"solid-fuel", 4}
 })
 
-forceBlueScienceDependencies({"flammables", "electric-engine", "circuit-network"}, {"advanced-electronics"})
+forceBlueScienceDependencies({"flammables", "electric-engine", "circuit-network"}, {"sulfur-processing", "advanced-electronics"})
 
 setCrackingAvailabilityWithBasic(true, false)
 setSolidFuelTechs("flammables", "flammables", "advanced-oil-processing")

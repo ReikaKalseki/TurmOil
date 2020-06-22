@@ -7,11 +7,15 @@ data.raw.recipe["basic-oil-processing"].emissions_multiplier = 2.0
 setOilRecipeInput(100, 0)
 setOilRecipeOutput(60)
 
-setBlueScienceRecipe({
-	{"electric-engine-unit", 2},
+local input = {
+	{"electric-engine-unit", 1},
 	{"sulfur", 4},
 	{"solid-fuel", 3}
-})
+}
+if Config.acid then
+	input[2] = {"sulfuric-acid", 40}
+end
+setBlueScienceRecipe(input)
 
 forceBlueScienceDependencies({"flammables", "sulfur-processing", "electric-engine"}, {"advanced-electronics"})
 

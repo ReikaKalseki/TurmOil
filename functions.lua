@@ -4,6 +4,7 @@ require "__DragonIndustries__.recipe"
 require "__DragonIndustries__.tech"
 
 function setBlueScienceStatus(tech, has)
+	tech = data.raw.technology[tech]
 	if has then
 		addSciencePackToTech(tech, "chemical-science-pack")
 		if not listHasValue(tech.prerequisites, "chemical-science-pack") then
@@ -11,7 +12,9 @@ function setBlueScienceStatus(tech, has)
 		end
 	else
 		removeSciencePackFromTech(tech, "chemical-science-pack")
-		removeEntryFromList(tech.prerequisites, "chemical-science-pack")
+		if tech.prerequisites then
+			removeEntryFromList(tech.prerequisites, "chemical-science-pack")
+		end
 	end
 end
 

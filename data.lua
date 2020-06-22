@@ -3,7 +3,7 @@ require "config"
 require "modes.original"
 require "modes.heavy"
 require "modes.heavy-with-sulfur"
-require "modes.heavy-with-sulfuric"
+require "modes.heavy-with-sulfur-lube"
 
 require "__DragonIndustries__.recipe"
 
