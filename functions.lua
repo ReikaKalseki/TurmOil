@@ -6,8 +6,12 @@ require "__DragonIndustries__.tech"
 function setBlueScienceStatus(tech, has)
 	if has then
 		addSciencePackToTech(tech, "chemical-science-pack")
+		if not listHasValue(tech.prerequisites, "chemical-science-pack") then
+			table.insert(tech.prerequisites, "chemical-science-pack")
+		end
 	else
 		removeSciencePackFromTech(tech, "chemical-science-pack")
+		removeEntryFromList(tech.prerequisites, "chemical-science-pack")
 	end
 end
 
@@ -15,13 +19,25 @@ function setOilRecipeInput(crude, water)
 	local rec = data.raw.recipe["basic-oil-processing"]
 	
 	rec.ingredients = {
-		{type="fluid", name="water", amount=water and water or 0},
-		{type="fluid", name="crude-oil", amount=crude and crude or 0}
+		{type="fluid", name="crude-oil", amount=crude and crude or 0, fluidbox_index = 2}
     }
+	if water and water > 0 then
+		table.insert(rec.ingredients, 1, {type="fluid", name="water", amount=water, fluidbox_index = 1})
+	end
 end
 
 function setOilRecipeOutput(heavy, light, gas)
 	local rec = data.raw.recipe["basic-oil-processing"]
+	
+	rec.results = {
+		{type="fluid", name="heavy-oil", amount=heavy and heavy or 0},
+		{type="fluid", name="light-oil", amount=light and light or 0},
+		{type="fluid", name="petroleum-gas", amount=gas and gas or 0}
+	}
+end
+
+function setAdvOilRecipeOutput(heavy, light, gas)
+	local rec = data.raw.recipe["advanced-oil-processing"]
 	
 	rec.results = {
 		{type="fluid", name="heavy-oil", amount=heavy and heavy or 0},
