@@ -4,14 +4,15 @@ require "__DragonIndustries__.recipe"
 require "__DragonIndustries__.tech"
 
 function setBlueScienceStatus(tech, has)
+	log("Setting blue science usage for " .. tech .. ": " .. (has and "yes" or "no"))
 	tech = data.raw.technology[tech]
 	if has then
-		addSciencePackToTech(tech, "chemical-science-pack")
+		addSciencePackToTech(tech.name, "chemical-science-pack")
 		if not listHasValue(tech.prerequisites, "chemical-science-pack") then
 			table.insert(tech.prerequisites, "chemical-science-pack")
 		end
 	else
-		removeSciencePackFromTech(tech, "chemical-science-pack")
+		removeSciencePackFromTech(tech.name, "chemical-science-pack")
 		if tech.prerequisites then
 			removeEntryFromList(tech.prerequisites, "chemical-science-pack")
 		end
