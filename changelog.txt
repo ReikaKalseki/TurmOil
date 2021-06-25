@@ -1,0 +1,29 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.102.1
+Date: Mar 27 2021
+	- Update to 1.1
+---------------------------------------------------------------------------------------------------
+Version: 1.18.10
+Date: Jun 29 2020
+	- Added setting to revert flamethrower ammo recipe to 0.16 recipe
+	- Fixed missing fluidbox allocations on modified oil recipes
+	- Split "heavy with sulfur(ic)" mode into two separate modes, allowing choice of sulfur being a lubricant byproduct
+	- Added option to toggle use of sulfur vs sulfuric acid in blue science recipe
+	- Tweaked heavy-only option progression
+	- Improved mod compat
+---------------------------------------------------------------------------------------------------
+Version: 1.18.5
+Date: Jun 11 2020
+	- Made blue science requirements more correct for each option
+	- Registered installation exclusion with conflicting mods
+	- Made sulfur producible directly from heavy oil on "heavy oil" setting
+---------------------------------------------------------------------------------------------------
+Version: 1.18.1
+Date: May 29 2020
+	- Update to 0.18
+	- Halved sulfur fuel value, increased emissions 50%, and cut acceleration power 3x
+---------------------------------------------------------------------------------------------------
+Version: 1.17.15
+Date: Aug 2 2019
+	- Release
+---------------------------------------------------------------------------------------------------
