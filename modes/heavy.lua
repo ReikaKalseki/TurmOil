@@ -2,6 +2,8 @@ require("functions")
 
 if Config.oilMode ~= "heavy" then return end
 
+if mods["aai-industry"] then error("This oil processing configuration is not compatible with AAI industry, as that mod makes blue science dependent on plastic and advanced circuits. Choose 'original' or uninstall one of the two mods.") end
+
 data.raw.recipe["basic-oil-processing"].emissions_multiplier = 2.0
 
 setOilRecipeInput(100, 0)
