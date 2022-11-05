@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.144.1
+Date: Oct 7 2022
+	- Added code to disallow most of the modes with AAI, as they are incompatible and result in dependency loops
+---------------------------------------------------------------------------------------------------
 Version: 1.102.1
 Date: Mar 27 2021
 	- Update to 1.1
